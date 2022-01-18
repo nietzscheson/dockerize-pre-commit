@@ -1,0 +1,17 @@
+repos:
+  - repo: git://github.com/pre-commit/pre-commit-hooks
+    sha: master  # Use the ref you want to point at
+    hooks:
+      - { id: check-case-conflict }
+      - { id: check-merge-conflict }
+      - { id: check-symlinks }
+      - { id: check-json }
+      - { id: check-yaml }
+      - { id: detect-private-key }
+      - { id: end-of-file-fixer }
+      - { id: trailing-whitespace }
+  - repo: https://github.com/psf/black
+    rev: 21.6b0
+    hooks:
+      - id: black
+        language_version: python3.9

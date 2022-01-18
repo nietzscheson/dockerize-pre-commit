@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  core:
+    container_name: core
+    working_dir: /core
+    build:
+      context: .
+    volumes:
+      ## - [host]:/[guest]
+      - ./:/core
+      - ./.git:/tmp/.git
+      - ./.githooks:/tmp/.githooks
